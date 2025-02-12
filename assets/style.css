@@ -1,0 +1,73 @@
+/* Ensure table is responsive */
+.wp-fdt-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    outline: none; /* Prevents focus ring from disappearing */
+}
+.wp-fdt-table-container:focus {
+    outline: 2px solid #0073aa; /* Adds a visible focus ring */
+}
+
+
+/* Style the table */
+.wp-fdt-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Table header */
+.wp-fdt-table th {
+    background-color: #0073aa; /* WordPress blue */
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #005177;
+    white-space: nowrap; /* Prevents header text from wrapping */
+}
+
+/* Table rows */
+.wp-fdt-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Striped rows */
+.wp-fdt-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+.wp-fdt-table tbody tr:hover {
+    background-color: #e0f3ff;
+}
+
+/* Make links look like buttons */
+.wp-fdt-table a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wp-fdt-table a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .wp-fdt-table th, .wp-fdt-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .wp-fdt-table th {
+        background-color: black;
+        color: yellow;
+    }
+    .wp-fdt-table td {
+        border-bottom: 2px solid white;
+    }
+}
